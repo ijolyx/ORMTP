@@ -1,22 +1,27 @@
 package net.joastbg.sampleapp.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="ASSURANCE_HABITATION")
 public class AssuranceHabitat extends Assurance {
     
-    private String adresse;
+    @Column(name="numeroAssurance")
+    private int numeroAssurance = super.getId();
+    
+    @Column(name="adressAssure")
+    private String adresseAssure;
+    
+    @Column(name="valeurCouverture")
+    private String valeurCouverture;
+    
+    
 
-    /**
-     * @return the adresse
-     */
-    public String getAdresse() {
-        return adresse;
-    }
-
-    /**
-     * @param adresse the adresse to set
-     */
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
+    
     
     
 }

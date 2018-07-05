@@ -12,8 +12,14 @@ import javax.persistence.Table;
 @Table(name="ECHEANCES")
 public class Echeances {
 
+    
     @Id
-    private int id;
+    @Column(name="idEcheance")
+    private int idEcheance;
+    
+    
+    @Column(name="numeroAssurance")
+    private int numeroAssurance;
     
     
     
@@ -35,13 +41,7 @@ public class Echeances {
     
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+   
 
     /**
      * @return the prix

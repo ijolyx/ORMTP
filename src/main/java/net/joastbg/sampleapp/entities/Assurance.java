@@ -25,7 +25,7 @@ public class Assurance {
     private Echeances echeances;
     
     public Assurance(){
-        echeances.setId(this.getId());
+        
     
     }
     

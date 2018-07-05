@@ -2,21 +2,26 @@ package net.joastbg.sampleapp.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 
 
 @Entity
-@Table
+@Table(name="COMPTE_BANCAIRE")
 public class CompteBancaire {
- @Column(name="iban")
+ 
     @Id
+    @Column(name="iban")
     private String iban;
     @Column(name="proprietaire")
     private String proprietaire;
     @Column(name="swift_code")
     private String swift_code;
+    @Column(name="idClient")
+    private int id_client;
     
     private boolean principale = false;
 
@@ -68,5 +73,19 @@ public class CompteBancaire {
      */
     public void setPrincipale(boolean principale) {
         this.principale = principale;
+    }
+
+    /**
+     * @return the id_client
+     */
+    public int getId_client() {
+        return id_client;
+    }
+
+    /**
+     * @param id_client the id_client to set
+     */
+    public void setId_client(int id_client) {
+        this.id_client = id_client;
     }
 }
