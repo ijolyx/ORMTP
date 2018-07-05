@@ -24,6 +24,8 @@ public class CompteBancaire {
     private int id_client;
     
     private boolean principale = false;
+    
+    public CompteBancaire(){}
 
     public String getIban() {
         return iban;

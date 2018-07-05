@@ -15,14 +15,14 @@ public class Assurance {
 
     @Id
     @Column(name ="numeroAssurance")
-    private int id;
+    private int numeroAssurance;
     @Column(name="dateSouscription")
     private Date dateSouscription;
     @Column(name="dateAnniverssaire")
     private Date dateAnniversaire;
     @Column(name="datePrelevement")
     private Date datePrelevement;
-    private Echeances echeances;
+     // private Echeances echeances;
     
     public Assurance(){
         
@@ -30,13 +30,6 @@ public class Assurance {
     }
     
     
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
 
     /**
      * @return the dateSouscription

@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -27,7 +30,9 @@ public class Client  {
     @OneToMany
     private List<CompteBancaire> accounts = new ArrayList<>();
 
-    private Contact contact;
+   // @ManyToOne
+   // @JoinColumn(name="idClient")
+    // private Contact contact;
     
     
     public int getId_client() {
@@ -65,19 +70,7 @@ public class Client  {
         
     }
 
-    /**
-     * @return the contact
-     */
-    public Contact getContact() {
-        return contact;
-    }
-
-    /**
-     * @param contact the contact to set
-     */
-    public void setContact(Contact contact) {
-        this.contact = contact;
-    }
+   
     
    
 }

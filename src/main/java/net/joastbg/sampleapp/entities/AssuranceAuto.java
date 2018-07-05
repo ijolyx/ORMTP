@@ -2,28 +2,23 @@ package net.joastbg.sampleapp.entities;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="ASSURANCE_AUTO")
 public class AssuranceAuto extends Assurance {
     
-   
-    private int bonus;
+    @Column(name="bonusMalus")
+    private int bonusmalus;
+    
+    @Column(name="immatriculation")
     private String immatriculation;
-    private PersonneMorale conducteurPrincipal;
-    private List<PersonnePhysique> conducteurSecondaire = new ArrayList<>();
+   // private PersonneMorale conducteurPrincipal;
+   // private List<PersonnePhysique> conducteurSecondaire = new ArrayList<>();
 
-    /**
-     * @return the bonus
-     */
-    public int getBonus() {
-        return bonus;
-    }
-
-    /**
-     * @param bonus the bonus to set
-     */
-    public void setBonus(int bonus) {
-        this.bonus = bonus;
-    }
+  
 
     /**
      * @return the immatriculation
@@ -39,25 +34,23 @@ public class AssuranceAuto extends Assurance {
         this.immatriculation = immatriculation;
     }
 
+   
+
+    
+    
+
     /**
-     * @return the conducteurPrincipal
+     * @return the bonusmalus
      */
-    public PersonneMorale getConducteurPrincipal() {
-        return conducteurPrincipal;
+    public int getBonusmalus() {
+        return bonusmalus;
     }
 
     /**
-     * @param conducteurPrincipal the conducteurPrincipal to set
+     * @param bonusmalus the bonusmalus to set
      */
-    public void setConducteurPrincipal(PersonneMorale conducteurPrincipal) {
-        this.conducteurPrincipal = conducteurPrincipal;
-    }
-
-    /**
-     * @return the conducteurSecondaire
-     */
-    public List<PersonnePhysique> getConducteurSecondaire() {
-        return conducteurSecondaire;
+    public void setBonusmalus(int bonusmalus) {
+        this.bonusmalus = bonusmalus;
     }
 
    

@@ -10,8 +10,8 @@ import javax.persistence.Table;
 @Table(name="ASSURANCE_HABITATION")
 public class AssuranceHabitat extends Assurance {
     
-    @Column(name="numeroAssurance")
-    private int numeroAssurance = super.getId();
+    //@Column(name="numeroAssurance")
+   // private int numeroAssurance;
     
     @Column(name="adressAssure")
     private String adresseAssure;

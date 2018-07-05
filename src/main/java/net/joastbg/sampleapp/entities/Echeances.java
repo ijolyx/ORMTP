@@ -32,7 +32,7 @@ public class Echeances {
     @Column(name="dateEmissionFacture")
     private Date emissionFacture;
     
-    private List<Echeances> ech = new ArrayList<>();
+     // private List<Echeances> ech = new ArrayList<>();
     
     
     public void imprimeEcheance(){
